@@ -1,5 +1,6 @@
 module "vpc" {
-  source = "git::https://github.com/tranvix0910/workshop-1-tfmodules.git//modules/networking?ref=v1.0.0"
+#   source = "git::https://github.com/tranvix0910/workshop-1-tfmodules.git//modules/networking?ref=v1.0.0"
+    source = "terraform-aws-modules/vpc/aws"
 
   name = var.vpc_name
   cidr = var.vpc_cidr
