@@ -1,4 +1,4 @@
-module "vpc" {
+module "networking" {
 # source = "git::https://github.com/tranvix0910/workshop-1-tfmodules.git//modules/networking?ref=v1.0.0"
   source = "terraform-aws-modules/vpc/aws"
 
@@ -18,6 +18,6 @@ module "vpc" {
 
 # Create subnet group for MongoDB
 resource "aws_docdb_subnet_group" "mongodb_subnet_group" {
-  subnet_ids = module.vpc.private_subnets
+  subnet_ids = module.networking.private_subnets
   name       = "mongodb-subnet-group"
 }
