@@ -1,1 +1,8 @@
- 
+region = "ap-southeast-1"
+ecs_cluster_name = "ecs-cluster"
+frontend_log_group_name = "ecs/frontend-log-group"
+backend_log_group_name = "ecs/backend-log-group"
+frontend_container_name = "wine-app-frontend-container"
+backend_container_name = "wine-app-backend-container"
+frontend_ecr_image_url = "022499043310.dkr.ecr.ap-southeast-1.amazonaws.com/wine-app/frontend:v1"
+backend_ecr_image_url = "022499043310.dkr.ecr.ap-southeast-1.amazonaws.com/wine-app/backend:v1"

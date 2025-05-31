@@ -1,1 +1,5 @@
- 
+region = "ap-southeast-1"
+task_execution_role_name = "wine-app-task-execution-role"
+task_execution_policy_name = "wine-app-task-execution-policy"
+task_role_name = "wine-app-task-role"
+task_role_policy_name = "wine-app-task-policy"
