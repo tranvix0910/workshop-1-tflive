@@ -3,7 +3,7 @@ module "public_sg" {
 
   name = "public-sg"
   description = "Security group for public access"
-  vpc_id = var.vpc_id
+  vpc_id = data.terraform_remote_state.networking.outputs.vpc_id
 
   ingress_with_cidr_blocks = [
     {
@@ -45,7 +45,7 @@ module "private_sg" {
 
   name = "private-sg"
   description = "Security group for private access"
-  vpc_id = var.vpc_id
+  vpc_id = data.terraform_remote_state.networking.outputs.vpc_id
 
   ingress_with_source_security_group_id = [
     {
@@ -69,7 +69,7 @@ module "bastion_sg" {
 
   name = "bastion-sg"
   description = "Security group for bastion host"
-  vpc_id = var.vpc_id
+  vpc_id = data.terraform_remote_state.networking.outputs.vpc_id
 
   ingress_with_cidr_blocks = [
     {
@@ -87,7 +87,7 @@ module "database_sg" {
 
   name = "database-sg"
   description = "Security group for database MongoDB"
-  vpc_id = var.vpc_id
+  vpc_id = data.terraform_remote_state.networking.outputs.vpc_id
 
   ingress_with_source_security_group_id = [
     {
